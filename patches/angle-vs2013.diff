@@ -1,0 +1,73 @@
+diff --git a/src/ANGLE.sln b/src/ANGLE.sln
+index c575165..ee4dba8 100644
+--- a/src/ANGLE.sln
++++ b/src/ANGLE.sln
+@@ -1,6 +1,6 @@
+ ﻿
+-Microsoft Visual Studio Solution File, Format Version 11.00
+-# Visual C++ Express 2010
++Microsoft Visual Studio Solution File, Format Version 12.00
++# Visual C++ Express 2013
+ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libEGL", "libEGL\libEGL.vcxproj", "{E746FCA9-64C3-433E-85E8-9A5A67AB7ED6}"
+ EndProject
+ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libGLESv2", "libGLESv2\libGLESv2.vcxproj", "{B5871A7A-968C-42E3-A33B-981E6F448E78}"
+diff --git a/src/compiler/preprocessor/preprocessor.vcxproj b/src/compiler/preprocessor/preprocessor.vcxproj
+index 14f701b..978f70a 100644
+--- a/src/compiler/preprocessor/preprocessor.vcxproj
++++ b/src/compiler/preprocessor/preprocessor.vcxproj
+@@ -22,6 +22,7 @@
+     <ProjectGuid>{FBE32DF3-0FB0-4F2F-A424-2C21BD7BC325}</ProjectGuid>
+     <RootNamespace>preprocessor</RootNamespace>
+     <Keyword>Win32Proj</Keyword>
++    <PlatformToolset>v120</PlatformToolset>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+diff --git a/src/compiler/translator_common.vcxproj b/src/compiler/translator_common.vcxproj
+index d5ff861..b7296bb 100644
+--- a/src/compiler/translator_common.vcxproj
++++ b/src/compiler/translator_common.vcxproj
+@@ -22,6 +22,7 @@
+     <ProjectGuid>{5B3A6DB8-1E7E-40D7-92B9-DA8AAE619FAD}</ProjectGuid>
+     <RootNamespace>compiler</RootNamespace>
+     <Keyword>Win32Proj</Keyword>
++    <PlatformToolset>v120</PlatformToolset>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+diff --git a/src/compiler/translator_hlsl.vcxproj b/src/compiler/translator_hlsl.vcxproj
+index 15a909e..afbd758 100644
+--- a/src/compiler/translator_hlsl.vcxproj
++++ b/src/compiler/translator_hlsl.vcxproj
+@@ -22,6 +22,7 @@
+     <ProjectGuid>{5620F0E4-6C43-49BC-A178-B804E1A0C3A7}</ProjectGuid>
+     <RootNamespace>CrossCompilerHLSL</RootNamespace>
+     <Keyword>Win32Proj</Keyword>
++    <PlatformToolset>v120</PlatformToolset>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+diff --git a/src/libEGL/libEGL.vcxproj b/src/libEGL/libEGL.vcxproj
+index f4d2e07..4544e03 100644
+--- a/src/libEGL/libEGL.vcxproj
++++ b/src/libEGL/libEGL.vcxproj
+@@ -22,6 +22,7 @@
+     <ProjectGuid>{E746FCA9-64C3-433E-85E8-9A5A67AB7ED6}</ProjectGuid>
+     <RootNamespace>libEGL</RootNamespace>
+     <Keyword>Win32Proj</Keyword>
++    <PlatformToolset>v120</PlatformToolset>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+diff --git a/src/libGLESv2/libGLESv2.vcxproj b/src/libGLESv2/libGLESv2.vcxproj
+index f841de2..7017600 100644
+--- a/src/libGLESv2/libGLESv2.vcxproj
++++ b/src/libGLESv2/libGLESv2.vcxproj
+@@ -22,6 +22,7 @@
+     <ProjectGuid>{B5871A7A-968C-42E3-A33B-981E6F448E78}</ProjectGuid>
+     <RootNamespace>libGLESv2</RootNamespace>
+     <Keyword>Win32Proj</Keyword>
++    <PlatformToolset>v120</PlatformToolset>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">

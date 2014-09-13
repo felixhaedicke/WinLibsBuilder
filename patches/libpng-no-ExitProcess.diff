@@ -1,0 +1,15 @@
+diff -Nuar libpng-1.6.12.orig/pngpriv.h libpng-1.6.12/pngpriv.h
+--- libpng-1.6.12.orig/pngpriv.h	2014-09-13 22:10:55.651073000 +0200
++++ libpng-1.6.12/pngpriv.h	2014-09-13 22:13:05.063983800 +0200
+@@ -471,11 +471,7 @@
+ 
+ /* Memory model/platform independent fns */
+ #ifndef PNG_ABORT
+-#  ifdef _WINDOWS_
+-#    define PNG_ABORT() ExitProcess(0)
+-#  else
+ #    define PNG_ABORT() abort()
+-#  endif
+ #endif
+ 
+ /* These macros may need to be architecture dependent. */

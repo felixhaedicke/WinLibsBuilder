@@ -1,0 +1,31 @@
+diff -Nuar SDL-2.0.4-9133.orig/VisualC-WinRT/WinPhone81_VS2013/SDL-WinPhone81.vcxproj SDL-2.0.4-9133/VisualC-WinRT/WinPhone81_VS2013/SDL-WinPhone81.vcxproj
+--- SDL-2.0.4-9133.orig/VisualC-WinRT/WinPhone81_VS2013/SDL-WinPhone81.vcxproj	2014-07-07 20:35:31.000000000 +0200
++++ SDL-2.0.4-9133/VisualC-WinRT/WinPhone81_VS2013/SDL-WinPhone81.vcxproj	2014-09-13 18:00:51.433999900 +0200
+@@ -325,23 +325,23 @@
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+-    <ConfigurationType>DynamicLibrary</ConfigurationType>
++    <ConfigurationType>StaticLibrary</ConfigurationType>
+     <UseDebugLibraries>true</UseDebugLibraries>
+     <PlatformToolset>v120_wp81</PlatformToolset>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+-    <ConfigurationType>DynamicLibrary</ConfigurationType>
++    <ConfigurationType>StaticLibrary</ConfigurationType>
+     <UseDebugLibraries>true</UseDebugLibraries>
+     <PlatformToolset>v120_wp81</PlatformToolset>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+-    <ConfigurationType>DynamicLibrary</ConfigurationType>
++    <ConfigurationType>StaticLibrary</ConfigurationType>
+     <UseDebugLibraries>false</UseDebugLibraries>
+     <WholeProgramOptimization>true</WholeProgramOptimization>
+     <PlatformToolset>v120_wp81</PlatformToolset>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+-    <ConfigurationType>DynamicLibrary</ConfigurationType>
++    <ConfigurationType>StaticLibrary</ConfigurationType>
+     <UseDebugLibraries>false</UseDebugLibraries>
+     <WholeProgramOptimization>true</WholeProgramOptimization>
+     <PlatformToolset>v120_wp81</PlatformToolset>

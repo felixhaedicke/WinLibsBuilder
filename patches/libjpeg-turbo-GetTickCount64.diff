@@ -1,0 +1,12 @@
+diff -Nuar libjpeg-turbo-1.3.1.orig/tjutil.c libjpeg-turbo-1.3.1/tjutil.c
+--- libjpeg-turbo-1.3.1.orig/tjutil.c	2011-05-24 19:03:51.000000000 +0200
++++ libjpeg-turbo-1.3.1/tjutil.c	2014-09-13 15:47:06.369528700 +0200
+@@ -43,7 +43,7 @@
+ {
+ 	LARGE_INTEGER t;
+ 	if(f<0.0) f=getfreq();
+-	if(f==0.0) return (double)GetTickCount()/1000.;
++	if(f==0.0) return (double)GetTickCount64()/1000.;
+ 	else
+ 	{
+ 		QueryPerformanceCounter(&t);

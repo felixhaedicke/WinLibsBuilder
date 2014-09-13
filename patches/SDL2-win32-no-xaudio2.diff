@@ -1,0 +1,12 @@
+diff -Nuar SDL-2.0.4-9133.orig/include/SDL_config_windows.h SDL-2.0.4-9133/include/SDL_config_windows.h
+--- SDL-2.0.4-9133.orig/include/SDL_config_windows.h	2014-08-17 23:46:25.000000000 +0200
++++ SDL-2.0.4-9133/include/SDL_config_windows.h	2014-09-13 18:41:36.059560500 +0200
+@@ -155,7 +155,7 @@
+ 
+ /* Enable various audio drivers */
+ #define SDL_AUDIO_DRIVER_DSOUND 1
+-#define SDL_AUDIO_DRIVER_XAUDIO2    1
++#define SDL_AUDIO_DRIVER_XAUDIO2    0
+ #define SDL_AUDIO_DRIVER_WINMM  1
+ #define SDL_AUDIO_DRIVER_DISK   1
+ #define SDL_AUDIO_DRIVER_DUMMY  1
