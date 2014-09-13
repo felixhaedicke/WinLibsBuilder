@@ -11,7 +11,8 @@ Requirements:
 
 Before building, you might need to adjust env.inc.
 
-./download.sh - Download the library source tarballs
-./extract-and-patch.sh - Extract and patch the downloaded tarballs
-./build - Build the libraries for one target
-./buildall - Build the libraries for all targets
+Available scripts:
+* download.sh - Download the library source tarballs
+* extract-and-patch.sh - Extract and patch the downloaded tarballs
+* build - Build the libraries for one target
+* buildall - Build the libraries for all targets
