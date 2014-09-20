@@ -1,0 +1,195 @@
+diff -Nuar MSOpenTech-ANGLE-r4303.orig/src/compiler/preprocessor/preprocessor.vcxproj MSOpenTech-ANGLE-r4303/src/compiler/preprocessor/preprocessor.vcxproj
+--- MSOpenTech-ANGLE-r4303.orig/src/compiler/preprocessor/preprocessor.vcxproj	2014-09-20 22:36:12.418851400 +0200
++++ MSOpenTech-ANGLE-r4303/src/compiler/preprocessor/preprocessor.vcxproj	2014-09-20 22:45:40.668876600 +0200
+@@ -76,7 +76,7 @@
+       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <MinimalRebuild>true</MinimalRebuild>
+       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+@@ -94,7 +94,7 @@
+       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <MinimalRebuild>true</MinimalRebuild>
+       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+@@ -108,7 +108,7 @@
+       <Optimization>MaxSpeed</Optimization>
+       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+@@ -125,7 +125,7 @@
+       <Optimization>MaxSpeed</Optimization>
+       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+diff -Nuar MSOpenTech-ANGLE-r4303.orig/src/compiler/translator_common.vcxproj MSOpenTech-ANGLE-r4303/src/compiler/translator_common.vcxproj
+--- MSOpenTech-ANGLE-r4303.orig/src/compiler/translator_common.vcxproj	2014-09-20 22:36:12.597562300 +0200
++++ MSOpenTech-ANGLE-r4303/src/compiler/translator_common.vcxproj	2014-09-20 22:44:34.411063700 +0200
+@@ -77,7 +77,7 @@
+       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <MinimalRebuild>true</MinimalRebuild>
+       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+@@ -96,7 +96,7 @@
+       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <MinimalRebuild>true</MinimalRebuild>
+       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+@@ -111,7 +111,7 @@
+       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)../;$(ProjectDir)../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+@@ -129,7 +129,7 @@
+       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)../;$(ProjectDir)../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+diff -Nuar MSOpenTech-ANGLE-r4303.orig/src/compiler/translator_hlsl.vcxproj MSOpenTech-ANGLE-r4303/src/compiler/translator_hlsl.vcxproj
+--- MSOpenTech-ANGLE-r4303.orig/src/compiler/translator_hlsl.vcxproj	2014-09-20 22:36:12.645419500 +0200
++++ MSOpenTech-ANGLE-r4303/src/compiler/translator_hlsl.vcxproj	2014-09-20 22:44:33.676663200 +0200
+@@ -77,7 +77,7 @@
+       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <MinimalRebuild>true</MinimalRebuild>
+       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+@@ -93,7 +93,7 @@
+       <IntrinsicFunctions>true</IntrinsicFunctions>
+       <AdditionalIncludeDirectories>$(ProjectDir)../;$(ProjectDir)../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;NOMINMAX;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+       <FunctionLevelLinking>true</FunctionLevelLinking>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+@@ -113,7 +113,7 @@
+       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <MinimalRebuild>true</MinimalRebuild>
+       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+@@ -132,7 +132,7 @@
+       <IntrinsicFunctions>true</IntrinsicFunctions>
+       <AdditionalIncludeDirectories>$(ProjectDir)../;$(ProjectDir)../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;NOMINMAX;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+       <FunctionLevelLinking>true</FunctionLevelLinking>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+diff -Nuar MSOpenTech-ANGLE-r4303.orig/src/libEGL/libEGL.vcxproj MSOpenTech-ANGLE-r4303/src/libEGL/libEGL.vcxproj
+--- MSOpenTech-ANGLE-r4303.orig/src/libEGL/libEGL.vcxproj	2014-09-20 22:36:11.326075200 +0200
++++ MSOpenTech-ANGLE-r4303/src/libEGL/libEGL.vcxproj	2014-09-20 22:43:58.995023400 +0200
+@@ -87,7 +87,7 @@
+       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBEGL_EXPORTS;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <MinimalRebuild>true</MinimalRebuild>
+       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+@@ -120,7 +120,7 @@
+       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+       <AdditionalIncludeDirectories>$(ProjectDir)/..; $(ProjectDir)/../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>ANGLE_DISABLE_TRACE;WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBEGL_EXPORTS;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+@@ -159,7 +159,7 @@
+       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBEGL_EXPORTS;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <MinimalRebuild>true</MinimalRebuild>
+       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+@@ -195,7 +195,7 @@
+       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+       <AdditionalIncludeDirectories>$(ProjectDir)/..; $(ProjectDir)/../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBEGL_EXPORTS;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+       <PrecompiledHeader>
+       </PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+diff -Nuar MSOpenTech-ANGLE-r4303.orig/src/libGLESv2/libGLESv2.vcxproj MSOpenTech-ANGLE-r4303/src/libGLESv2/libGLESv2.vcxproj
+--- MSOpenTech-ANGLE-r4303.orig/src/libGLESv2/libGLESv2.vcxproj	2014-09-20 22:36:11.854425500 +0200
++++ MSOpenTech-ANGLE-r4303/src/libGLESv2/libGLESv2.vcxproj	2014-09-20 22:43:11.277242800 +0200
+@@ -89,7 +89,7 @@
+       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBGLESV2_EXPORTS;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <MinimalRebuild>true</MinimalRebuild>
+       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+       <PrecompiledHeader>Use</PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+       <TreatWarningAsError>false</TreatWarningAsError>
+@@ -122,7 +122,7 @@
+       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)/..; $(ProjectDir)/../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>ANGLE_DISABLE_TRACE;WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBGLESV2_EXPORTS;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+       <PrecompiledHeader>Use</PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+       <TreatWarningAsError>false</TreatWarningAsError>
+@@ -162,7 +162,7 @@
+       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBGLESV2_EXPORTS;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <MinimalRebuild>true</MinimalRebuild>
+       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+       <PrecompiledHeader>Use</PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+       <DisableSpecificWarnings>4100;4127;4189;4239;4244;4245;4512;4702;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+@@ -198,7 +198,7 @@
+       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)/..; $(ProjectDir)/../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBGLESV2_EXPORTS;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
++      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+       <PrecompiledHeader>Use</PrecompiledHeader>
+       <WarningLevel>Level4</WarningLevel>
+       <DisableSpecificWarnings>4100;4127;4189;4239;4244;4245;4512;4702;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
