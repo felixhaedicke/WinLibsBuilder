@@ -27,4 +27,6 @@ tar xzvf libpng-${LIB_VERSION_LIBPNG}.tar.gz || exit $?
 tar xzvf MSOpenTech-ANGLE-r${LIB_VERSION_MSOPENTECH_ANGLE_SVNREV}.tar.gz || exit $?
 cd MSOpenTech-ANGLE-r${LIB_VERSION_MSOPENTECH_ANGLE_SVNREV} || exit $?
 patch -Np1 -i ../patches/angle-vs2013.diff || exit $?
+patch -Np1 -i ../patches/angle-fix-x64-include-dirs.diff || exit $?
+patch -Np1 -i ../patches/angle-no-werror.diff || exit $?
 cd .. || exit $?
